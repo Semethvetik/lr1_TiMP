@@ -18,33 +18,33 @@ int main(int argc, char **argv)
     string key;
     string text;
     unsigned op;
-    cout<<"Введите ключ: ";
-    cin>>key;
+    cout << "Введите ключ: ";
+    cin >> key;
     if (!isValid(key)) {
-        cerr<<"Некорректный ключ\n";
+        cerr << "Некорректный ключ \n";
         return 1;
     }
     modAlphaCipher cipher(key);
     do {
-        cout<<"Введите операцию (1-зашифровать, 2-расшифровать): ";
-        cin>>op;
+        cout << "Введите операцию (1-зашифровать, 2-расшифровать): ";
+        cin >> op;
         if (op > 2) {
-            cout<<"Неизвестная операция\n";
-        } else if (op >0) {
-            cout<<"Введите текст: ";
-            cin>>text;
+            cout << "Неизвестная операция\n";
+        } else if (op > 0) {
+            cout << "Введите текст: ";
+            cin >> text;
             if (isValid(text)) {
-                if (op==1) {
-                    cout<<"Зашифрованный текст: "<<cipher.encrypt(text)<<endl;
+                if (op == 1) {
+                    cout << "Зашифрованный текст: " << cipher.encrypt(text) << endl;
                 } else {
-                    cout<<"Расшифрованный текст: "<<cipher.decrypt(text)<<endl;
+                    cout << "Расшифрованный текст: " << cipher.decrypt(text) << endl;
                 }
             } else {
-                cout<<"Операция прервана: некорректный текст\n";
+                cout << "Операция прервана: некорректный текст \n";
 
             }
         }
-    } while (op!=0);
+    } while (op != 0);
     
     return 0;
 }
