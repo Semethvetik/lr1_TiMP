@@ -9,7 +9,7 @@ bool isValid(const string& s)
     return true;
 }
 
-int main(int argc, char **argv)
+int main()
 {
     int key;
     string stroka;
