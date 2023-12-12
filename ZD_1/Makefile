@@ -7,10 +7,10 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-        $(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 %.o: %.cpp
-        $(CC) $(CFLAGS) -c $< -o $@
-
+	$(CC) $(CFLAGS) -c $< -o $@
+	
 clean:
-        rm -f $(OBJS) $(EXEC)
+	rm -f $(OBJS) $(EXEC)
